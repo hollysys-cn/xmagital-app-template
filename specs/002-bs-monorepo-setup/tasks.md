@@ -6,78 +6,152 @@
 
 ## Phase 1: 基础架构搭建 (Infrastructure)
 
-- [ ] **Task 1.1**: 初始化 Monorepo 仓库
-  - [ ] 创建 `pnpm-workspace.yaml`
-  - [ ] 配置 `.npmrc` (阿里云镜像)
-  - [ ] 配置 `.vscode/settings.json` 和 `.vscode/extensions.json`
-  - [ ] 创建根目录 `package.json` (包含 dev, build, cleanup 脚本占位符)
-  - [ ] 配置 TypeScript 根配置 `tsconfig.base.json`
+**目标**: 项目初始化与基础结构
 
-- [ ] **Task 1.2**: 搭建 Backend 基础
-  - [ ] 初始化 `apps/backend`
-  - [ ] 安装 Apollo Server, Pothos, Prisma, TypeScript
-  - [ ] 配置 `tsconfig.json`
-  - [ ] 初始化 Prisma (`prisma init`) 并配置 SQLite
-  - [ ] 创建基本的 Apollo Server 入口文件
+- [ ] T001 [P] 创建 Monorepo 工作区配置 `pnpm-workspace.yaml`
+- [ ] T002 [P] 配置阿里云镜像源 `.npmrc`
+- [ ] T003 [P] 创建根目录 `package.json` 并配置基础脚本
+- [ ] T004 [P] 配置 VS Code 设置 `.vscode/settings.json` 和推荐插件 `.vscode/extensions.json`
+- [ ] T005 [P] 创建基础 TypeScript 配置 `tsconfig.base.json`
 
-- [ ] **Task 1.3**: 搭建 Frontend 基础
-  - [ ] 初始化 `apps/frontend` (Vite + Vue3 + TS)
-  - [ ] 安装 Element Plus, Apollo Client, Vue Router
-  - [ ] 配置 `vite.config.ts` (包含 alias 等)
-  - [ ] 配置 Apollo Client 实例
+---
 
-## Phase 2: 数据模型与后端实现 (Backend Implementation)
+## Phase 2: 核心基础 (Foundational)
 
-- [ ] **Task 2.1**: 定义 Prisma Schema
-  - [ ] 在 `apps/backend/prisma/schema.prisma` 中定义 `Student` 模型
-  - [ ] 运行 `prisma migrate dev` 创建数据库表
+**目标**: 必须在任何用户故事开始前完成的核心基础架构
 
-- [ ] **Task 2.2**: 实现 GraphQL Schema (Code-First)
-  - [ ] 配置 Pothos Schema Builder
-  - [ ] 创建 `Student` 类型定义 (Object Type)
-  - [ ] 实现 Query: `students`, `student(id)`
-  - [ ] 实现 Mutation: `createStudent`, `updateStudent`, `deleteStudent`
-  - [ ] 确保所有 Resolver 都有类型安全
+**⚠️ 关键**: 在此阶段完成前，不可开始任何用户故事的开发
 
-- [ ] **Task 2.3**: 后端测试与验证
-  - [ ] 启动后端服务，使用 Apollo Sandbox 验证 Schema 和 CRUD 操作
+- [ ] T006 初始化后端项目结构 `apps/backend/package.json`
+- [ ] T007 [P] 安装后端核心依赖 (Apollo, Pothos, Prisma)
+- [ ] T008 配置后端 TypeScript `apps/backend/tsconfig.json`
+- [ ] T009 初始化 Prisma 并配置 SQLite `apps/backend/prisma/schema.prisma`
+- [ ] T010 创建 Apollo Server 入口文件 `apps/backend/src/server.ts`
+- [ ] T011 初始化前端项目结构 `apps/frontend/package.json`
+- [ ] T012 [P] 安装前端核心依赖 (Vue3, Vite, Element Plus, Apollo Client)
+- [ ] T013 配置前端 Vite `apps/frontend/vite.config.ts`
+- [ ] T014 配置前端 Apollo Client `apps/frontend/src/apollo.ts`
+- [ ] T015 配置 Element Plus `apps/frontend/src/main.ts`
 
-## Phase 3: 前端集成与代码生成 (Frontend Integration)
+**检查点**: 基础架构就绪 - 用户故事开发现在可以并行开始
 
-- [ ] **Task 3.1**: 配置 GraphQL Code Generator
-  - [ ] 在 `apps/frontend` 中配置 `codegen.ts`
-  - [ ] 设置生成目标为 `src/graphql/generated.ts` (包含 Hooks)
-  - [ ] 编写前端 GraphQL Query/Mutation 文件 (`src/graphql/student.graphql`)
-  - [ ] 运行生成命令验证配置
+---
 
-- [ ] **Task 3.2**: 实现学生列表页面
-  - [ ] 创建 `StudentList.vue`
-  - [ ] 使用生成的 Hook 获取数据
-  - [ ] 使用 Element Plus Table 展示数据
+## Phase 3: 用户故事 1 - 开发者初始化项目 (优先级: P1) 🎯 MVP
 
-- [ ] **Task 3.3**: 实现学生编辑/创建功能
-  - [ ] 创建 `StudentForm.vue` (Dialog 或 独立页面)
-  - [ ] 使用生成的 Mutation Hook 提交数据
-  - [ ] 实现表单验证
+**目标**: 确保开发者能够快速安装依赖并启动开发环境
 
-## Phase 4: 工具链与清理脚本 (Tooling & Cleanup)
+**独立测试**: 在新克隆的仓库中运行 `pnpm install` 和 `pnpm dev`，验证服务正常启动
 
-- [ ] **Task 4.1**: 实现清理脚本
-  - [ ] 创建 `scripts/cleanup-example.js`
-  - [ ] 实现移除 `Student` 相关代码的逻辑 (Prisma model, Resolvers, Frontend components)
-  - [ ] 确保清理后项目仍能正常运行 (保留基础架构)
+### 用户故事 1 的实现
 
-- [ ] **Task 4.2**: 完善文档与配置
-  - [ ] 更新根目录 `README.md` (包含快速开始指南)
-  - [ ] 确保所有关键代码都有中文注释
-  - [ ] 验证 `pnpm install` 和 `pnpm dev` 流程
+- [ ] T016 [US1] 配置根目录并发启动脚本 `package.json`
+- [ ] T017 [US1] 验证安装与启动流程 (手动验证)
 
-## Phase 5: 最终验收 (Final Review)
+**检查点**: 此时，用户故事 1 应完全可用且可独立测试
 
-- [ ] **Task 5.1**: 全局 Lint 与类型检查
-  - [ ] 运行 `pnpm -r build` 确保无类型错误
-  - [ ] 检查代码风格是否符合规范
+---
 
-- [ ] **Task 5.2**: 演示验证
-  - [ ] 录制或截图 CRUD 操作流程
-  - [ ] 验证清理脚本的有效性
+## Phase 4: 用户故事 2 - 学生信息增删查改示例 (优先级: P1)
+
+**目标**: 提供高质量的 CRUD 示例代码，展示前后端交互最佳实践
+
+**独立测试**: 在浏览器中操作学生管理页面，验证数据持久化和页面更新
+
+### 用户故事 2 的实现
+
+- [ ] T018 [US2] 定义 Student Prisma 模型 `apps/backend/prisma/schema.prisma`
+- [ ] T019 [US2] 执行 Prisma Migration 生成数据库表 `apps/backend/prisma/migrations`
+- [ ] T020 [US2] 定义 Student Pothos 类型 `apps/backend/src/schema/student.ts`
+- [ ] T021 [US2] 实现 Student Query Resolvers `apps/backend/src/resolvers/student.ts`
+- [ ] T022 [US2] 实现 Student Mutation Resolvers `apps/backend/src/resolvers/student.ts`
+- [ ] T023 [US2] 注册 Schema 到 Server `apps/backend/src/schema/index.ts`
+- [ ] T024 [US2] 配置前端 Codegen `apps/frontend/codegen.ts`
+- [ ] T025 [US2] 编写前端 GraphQL 操作 `apps/frontend/src/graphql/student.graphql`
+- [ ] T026 [US2] 生成前端 Hooks `apps/frontend/src/graphql/generated.ts`
+- [ ] T027 [US2] 实现学生列表组件 `apps/frontend/src/components/StudentList.vue`
+- [ ] T028 [US2] 实现学生表单组件 `apps/frontend/src/components/StudentForm.vue`
+- [ ] T029 [US2] 集成学生管理页面 `apps/frontend/src/views/StudentView.vue`
+
+**检查点**: 此时，用户故事 1 和 2 应都能独立工作
+
+---
+
+## Phase 5: 用户故事 3 - 移除示例代码 (优先级: P2)
+
+**目标**: 提供一键清理脚本，方便开发者开始新项目
+
+**独立测试**: 运行清理脚本后，项目仍能正常编译启动，但学生相关功能消失
+
+### 用户故事 3 的实现
+
+- [ ] T030 [US3] 创建清理脚本 `scripts/cleanup-example.js`
+- [ ] T031 [US3] 在根目录 package.json 添加清理命令 `package.json`
+
+**检查点**: 所有用户故事现在都应能独立运行
+
+---
+
+## Phase 6: 打磨与横切关注点
+
+**目标**: 影响多个用户故事的改进
+
+- [ ] T032 [P] 更新项目文档 `README.md`
+- [ ] T033 [P] 全局类型检查与 Lint 修复
+
+---
+
+## 依赖关系与执行顺序
+
+### 阶段依赖
+
+- **Setup (Phase 1)**: 无依赖 - 可立即开始
+- **Foundational (Phase 2)**: 依赖 Setup 完成 - 阻塞所有用户故事
+- **User Stories (Phase 3+)**: 全部依赖 Foundational 阶段完成
+- **Polish (Final Phase)**: 依赖所有预期的用户故事完成
+
+### 用户故事依赖
+
+- **User Story 1 (P1)**: 可在 Foundational (Phase 2) 后开始
+- **User Story 2 (P1)**: 可在 Foundational (Phase 2) 后开始
+- **User Story 3 (P2)**: 可在 Foundational (Phase 2) 后开始 (技术上依赖 US2 的存在才有意义，但实现是独立的脚本)
+
+### 并行机会
+
+- 所有标记为 [P] 的 Setup 任务可并行执行
+- 所有标记为 [P] 的 Foundational 任务可并行执行
+- 一旦 Foundational 阶段完成，US1 和 US2 可并行开始
+
+---
+
+## 并行示例: 用户故事 2
+
+```bash
+# 同时启动用户故事 2 的所有后端任务:
+Task: "定义 Student Pothos 类型 apps/backend/src/schema/student.ts"
+Task: "实现 Student Query Resolvers apps/backend/src/resolvers/student.ts"
+
+# 同时启动用户故事 2 的所有前端任务:
+Task: "实现学生列表组件 apps/frontend/src/components/StudentList.vue"
+Task: "实现学生表单组件 apps/frontend/src/components/StudentForm.vue"
+```
+
+---
+
+## 实施策略
+
+### MVP 优先 (用户故事 1 & 2)
+
+1. 完成 Phase 1: Setup
+2. 完成 Phase 2: Foundational
+3. 完成 Phase 3: User Story 1 (Init)
+4. 完成 Phase 4: User Story 2 (CRUD Example)
+5. **停止并验证**: 测试 CRUD 功能
+6. 部署/演示
+
+### 增量交付
+
+1. 基础架构就绪
+2. 增加初始化能力 (US1)
+3. 增加 CRUD 示例 (US2)
+4. 增加清理脚本 (US3)
