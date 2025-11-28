@@ -16,6 +16,9 @@ const adapter = new PrismaLibSql({ url: connectionString });
 
 export const prisma = new PrismaClient({ adapter });
 
+// Patch DMMF for Pothos compatibility with Prisma 7
+// Prisma 7 changed the internal DMMF structure (removing isId, uniqueIndexes etc from runtime),
+// but Pothos still relies on these fields to generate the schema.
 const dmmf = Prisma.dmmf;
 dmmf.datamodel.models.forEach((model: any) => {
   if (!model.uniqueIndexes) model.uniqueIndexes = [];
