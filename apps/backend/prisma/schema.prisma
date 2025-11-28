@@ -7,8 +7,9 @@ generator pothos {
 }
 
 datasource db {
+  // 开发环境使用 sqlite，生产环境请改为 postgresql
+  // 注意：切换数据库类型需要重新生成迁移文件
   provider = "sqlite"
-  url      = env("DATABASE_URL")
 }
 
 model Student {

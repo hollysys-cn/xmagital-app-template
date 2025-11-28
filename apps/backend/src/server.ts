@@ -17,4 +17,8 @@ async function main() {
   console.log(`🚀  Server ready at: ${url}`);
 }
 
-main();
+export { server };
+
+if (process.env.NODE_ENV !== "test") {
+  main();
+}

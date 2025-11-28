@@ -101,45 +101,20 @@ const handleSubmit = async (formEl: FormInstance | undefined) => {
 </script>
 
 <template>
-  <el-form
-    ref="formRef"
-    :model="formData"
-    :rules="rules"
-    label-width="100px"
-  >
-    <el-form-item
-      label="姓名"
-      prop="name"
-    >
+  <el-form ref="formRef" :model="formData" :rules="rules" label-width="100px">
+    <el-form-item label="姓名" prop="name">
       <el-input v-model="formData.name" />
     </el-form-item>
-    <el-form-item
-      label="年龄"
-      prop="age"
-    >
-      <el-input-number
-        v-model="formData.age"
-        :min="1"
-        :max="100"
-      />
+    <el-form-item label="年龄" prop="age">
+      <el-input-number v-model="formData.age" :min="1" :max="100" />
     </el-form-item>
-    <el-form-item
-      label="性别"
-      prop="gender"
-    >
+    <el-form-item label="性别" prop="gender">
       <el-radio-group v-model="formData.gender">
-        <el-radio label="男">
-          男
-        </el-radio>
-        <el-radio label="女">
-          女
-        </el-radio>
+        <el-radio value="男"> 男 </el-radio>
+        <el-radio value="女"> 女 </el-radio>
       </el-radio-group>
     </el-form-item>
-    <el-form-item
-      label="入学日期"
-      prop="enrollmentDate"
-    >
+    <el-form-item label="入学日期" prop="enrollmentDate">
       <el-date-picker
         v-model="formData.enrollmentDate"
         type="date"
@@ -155,9 +130,7 @@ const handleSubmit = async (formEl: FormInstance | undefined) => {
       >
         {{ isEdit ? "更新" : "创建" }}
       </el-button>
-      <el-button @click="$emit('cancel')">
-        取消
-      </el-button>
+      <el-button @click="$emit('cancel')"> 取消 </el-button>
     </el-form-item>
   </el-form>
 </template>
