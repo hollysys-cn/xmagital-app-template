@@ -1,0 +1,47 @@
+query GetStudents {
+  students {
+    id
+    name
+    age
+    gender
+    enrollmentDate
+    createdAt
+    updatedAt
+  }
+}
+
+query GetStudent($id: ID!) {
+  student(id: $id) {
+    id
+    name
+    age
+    gender
+    enrollmentDate
+  }
+}
+
+mutation CreateStudent($input: CreateStudentInput!) {
+  createStudent(input: $input) {
+    id
+    name
+    age
+    gender
+    enrollmentDate
+  }
+}
+
+mutation UpdateStudent($id: ID!, $input: UpdateStudentInput!) {
+  updateStudent(id: $id, input: $input) {
+    id
+    name
+    age
+    gender
+    enrollmentDate
+  }
+}
+
+mutation DeleteStudent($id: ID!) {
+  deleteStudent(id: $id) {
+    id
+  }
+}

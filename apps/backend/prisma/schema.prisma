@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator pothos {
+  provider = "prisma-pothos-types"
+}
+
+datasource db {
+  // 开发环境使用 sqlite，生产环境请改为 postgresql
+  // 注意：切换数据库类型需要重新生成迁移文件
+  provider = "sqlite"
+}
+
+model Student {
+  id             String   @id @default(cuid())
+  name           String
+  age            Int
+  gender         String
+  enrollmentDate DateTime
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+
+

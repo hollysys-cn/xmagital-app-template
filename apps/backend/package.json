@@ -1,0 +1,33 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/src/server.js",
+    "test": "vitest run",
+    "lint": "eslint src",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.0.0",
+    "@libsql/client": "^0.15.15",
+    "@pothos/core": "^4.10.0",
+    "@pothos/plugin-prisma": "^4.12.0",
+    "@prisma/adapter-libsql": "^7.0.1",
+    "@prisma/client": "^7.0.1",
+    "dotenv": "^17.2.3",
+    "graphql": "^16.0.0",
+    "graphql-scalars": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "prisma": "^7.0.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.14"
+  }
+}
