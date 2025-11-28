@@ -1,53 +1,50 @@
 <!--
 Sync Impact Report:
-- Version change: 0.0.0 -> 1.0.0
+- Version change: 1.0.1 -> 1.1.0
 - Modified principles:
-  - Defined I. Localization First
-  - Defined II. Core Quality Principles
-  - Defined III. SOLID & Modular Design
-  - Defined IV. Automated Environment
-  - Defined V. Community Best Practices
-  - Added VI. Domestic Mirrors
-  - Added VII. B/S Architecture & Responsive Design
+  - Added VIII. Open Source License Compliance
 - Templates requiring updates: None
 - Follow-up TODOs: None
 -->
 
-# xmagital-app-template Constitution
+# xmagital-app-template 章程
 
-## Core Principles
+## 核心原则
 
-### I. Localization First (本地化优先)
-Software developers and users are primarily in mainland China. To facilitate Chinese users, all documentation, reasoning processes, code comments, and software interfaces MUST prioritize Simplified Chinese (zh-CN).
+### I. 本地化优先 (Localization First)
+软件开发者和使用者主要面向中国大陆。为方便中文用户，所有的文档、推理过程、代码注释、软件界面等必须优先使用简体中文 (zh-CN)。
 
-### II. Core Quality Principles (核心原则)
-Code quality, testability, user experience, and performance are the core principles. These are non-negotiable and must be prioritized in every decision.
+### II. 核心质量原则 (Core Quality Principles)
+代码质量、可测试性、用户体验和性能是核心原则。这些是不可协商的，必须在每一个决策中优先考虑。
 
-### III. SOLID & Modular Design (SOLID与模块化)
-Follow SOLID principles. Use modular design with clear interface design documents and code comments. Interfaces must be well-defined and documented before implementation.
+### III. SOLID 与模块化设计 (SOLID & Modular Design)
+遵循 SOLID 原则。使用模块化设计，并提供清晰的接口设计文档和代码注释。接口必须在实现之前定义清晰并编写文档。
 
-### IV. Automated Environment (自动化环境)
-Development environment and tools MUST be automatically installed and configured. The impact scope should be kept within the workspace as much as possible (e.g., using local config, containers, or virtual envs).
+### IV. 自动化环境 (Automated Environment)
+开发环境和工具必须自动安装和配置。影响范围应尽量保持在工作空间范围内（例如，使用本地配置、容器或虚拟环境）。
 
-### V. Community Best Practices (社区最佳实践)
-Combine and follow open source community best practices. Do not reinvent the wheel if a standard, well-maintained solution exists.
+### V. 社区最佳实践 (Community Best Practices)
+结合并遵循开源社区最佳实践。如果存在标准的、维护良好的解决方案，不要重复造轮子。
 
-### VI. Domestic Mirrors (国内镜像源)
-All development dependencies and tools MUST prioritize using domestic mirror sources (e.g., Aliyun https://developer.aliyun.com/mirror/) to accelerate retrieval speed.
+### VI. 国内镜像源 (Domestic Mirrors)
+所有开发依赖包和工具必须优先使用国内镜像源（如阿里云 https://developer.aliyun.com/mirror/）以加快拉取速度。
 
-### VII. B/S Architecture & Responsive Design (B/S架构与响应式)
-Prioritize Browser/Server (B/S) architecture. Ensure good responsive design to support various devices and screen sizes.
+### VII. B/S 架构与响应式设计 (B/S Architecture & Responsive Design)
+优先使用浏览器/服务器 (B/S) 架构。确保良好的响应式设计以支持各种设备和屏幕尺寸。
 
-## Additional Constraints
+### VIII. 开源协议合规 (Open Source License Compliance)
+第三方依赖包要求开源且商业友好。优先选择 MIT、Apache 开源协议。使用其他协议的依赖包需要人工确认核准。
 
-All dependencies must be pinned to specific versions to ensure reproducibility. Security vulnerabilities in dependencies must be addressed immediately.
+## 附加约束
 
-## Development Workflow
+所有依赖项必须锁定到特定版本以确保可复现性。依赖项中的安全漏洞必须立即解决。
 
-Code reviews are mandatory. All PRs must pass automated tests. Documentation must be updated with code changes.
+## 开发工作流
 
-## Governance
+代码审查是强制性的。所有 PR 必须通过自动化测试。文档必须随代码变更同步更新。
 
-Constitution supersedes all other practices. Amendments require documentation and approval. All PRs/reviews must verify compliance.
+## 治理
 
-**Version**: 1.0.0 | **Ratified**: 2025-11-28 | **Last Amended**: 2025-11-28
+本章程取代所有其他实践。修订需要文档记录和批准。所有 PR/审查必须验证合规性。
+
+**版本**: 1.1.0 | **批准日期**: 2025-11-28 | **最后修订**: 2025-11-28
