@@ -1,4 +1,4 @@
-# Tasks: 构建B/S架构Monorepo模版
+# Tasks: 构建 B/S 架构 Monorepo 模版
 
 **Branch**: `002-bs-monorepo-setup`
 **Spec**: [spec.md](./spec.md)
@@ -8,11 +8,11 @@
 
 **目标**: 项目初始化与基础结构
 
-- [ ] T001 [P] 创建 Monorepo 工作区配置 `pnpm-workspace.yaml`
-- [ ] T002 [P] 配置阿里云镜像源 `.npmrc`
-- [ ] T003 [P] 创建根目录 `package.json` 并配置基础脚本
-- [ ] T004 [P] 配置 VS Code 设置 `.vscode/settings.json` 和推荐插件 `.vscode/extensions.json`
-- [ ] T005 [P] 创建基础 TypeScript 配置 `tsconfig.base.json`
+- [x] T001 [P] 创建 Monorepo 工作区配置 `pnpm-workspace.yaml`
+- [x] T002 [P] 配置阿里云镜像源 `.npmrc`
+- [x] T003 [P] 创建根目录 `package.json` 并配置基础脚本
+- [x] T004 [P] 配置 VS Code 设置 `.vscode/settings.json` 和推荐插件 `.vscode/extensions.json`
+- [x] T005 [P] 创建基础 TypeScript 配置 `tsconfig.base.json`
 
 ---
 
@@ -22,16 +22,16 @@
 
 **⚠️ 关键**: 在此阶段完成前，不可开始任何用户故事的开发
 
-- [ ] T006 初始化后端项目结构 `apps/backend/package.json`
-- [ ] T007 [P] 安装后端核心依赖 (Apollo, Pothos, Prisma)
-- [ ] T008 配置后端 TypeScript `apps/backend/tsconfig.json`
-- [ ] T009 初始化 Prisma 并配置 SQLite `apps/backend/prisma/schema.prisma`
-- [ ] T010 创建 Apollo Server 入口文件 `apps/backend/src/server.ts`
-- [ ] T011 初始化前端项目结构 `apps/frontend/package.json`
-- [ ] T012 [P] 安装前端核心依赖 (Vue3, Vite, Element Plus, Apollo Client)
-- [ ] T013 配置前端 Vite `apps/frontend/vite.config.ts`
-- [ ] T014 配置前端 Apollo Client `apps/frontend/src/apollo.ts`
-- [ ] T015 配置 Element Plus `apps/frontend/src/main.ts`
+- [x] T006 初始化后端项目结构 `apps/backend/package.json`
+- [x] T007 [P] 安装后端核心依赖 (Apollo, Pothos, Prisma)
+- [x] T008 配置后端 TypeScript `apps/backend/tsconfig.json`
+- [x] T009 初始化 Prisma 并配置 SQLite `apps/backend/prisma/schema.prisma`
+- [x] T010 创建 Apollo Server 入口文件 `apps/backend/src/server.ts`
+- [x] T011 初始化前端项目结构 `apps/frontend/package.json`
+- [x] T012 [P] 安装前端核心依赖 (Vue3, Vite, Element Plus, Apollo Client)
+- [x] T013 配置前端 Vite `apps/frontend/vite.config.ts`
+- [x] T014 配置前端 Apollo Client `apps/frontend/src/apollo.ts`
+- [x] T015 配置 Element Plus `apps/frontend/src/main.ts`
 
 **检查点**: 基础架构就绪 - 用户故事开发现在可以并行开始
 
@@ -45,8 +45,8 @@
 
 ### 用户故事 1 的实现
 
-- [ ] T016 [US1] 配置根目录并发启动脚本 `package.json`
-- [ ] T017 [US1] 验证安装与启动流程 (手动验证)
+- [x] T016 [US1] 配置根目录并发启动脚本 `package.json`
+- [x] T017 [US1] 验证安装与启动流程 (手动验证)
 
 **检查点**: 此时，用户故事 1 应完全可用且可独立测试
 
@@ -60,18 +60,18 @@
 
 ### 用户故事 2 的实现
 
-- [ ] T018 [US2] 定义 Student Prisma 模型 `apps/backend/prisma/schema.prisma`
-- [ ] T019 [US2] 执行 Prisma Migration 生成数据库表 `apps/backend/prisma/migrations`
-- [ ] T020 [US2] 定义 Student Pothos 类型 `apps/backend/src/schema/student.ts`
-- [ ] T021 [US2] 实现 Student Query Resolvers `apps/backend/src/resolvers/student.ts`
-- [ ] T022 [US2] 实现 Student Mutation Resolvers `apps/backend/src/resolvers/student.ts`
-- [ ] T023 [US2] 注册 Schema 到 Server `apps/backend/src/schema/index.ts`
-- [ ] T024 [US2] 配置前端 Codegen `apps/frontend/codegen.ts`
-- [ ] T025 [US2] 编写前端 GraphQL 操作 `apps/frontend/src/graphql/student.graphql`
-- [ ] T026 [US2] 生成前端 Hooks `apps/frontend/src/graphql/generated.ts`
-- [ ] T027 [US2] 实现学生列表组件 `apps/frontend/src/components/StudentList.vue`
-- [ ] T028 [US2] 实现学生表单组件 `apps/frontend/src/components/StudentForm.vue`
-- [ ] T029 [US2] 集成学生管理页面 `apps/frontend/src/views/StudentView.vue`
+- [x] T018 [US2] 定义 Student Prisma 模型 `apps/backend/prisma/schema.prisma`
+- [x] T019 [US2] 执行 Prisma Migration 生成数据库表 `apps/backend/prisma/migrations`
+- [x] T020 [US2] 定义 Student Pothos 类型 `apps/backend/src/schema/student.ts`
+- [x] T021 [US2] 实现 Student Query Resolvers `apps/backend/src/resolvers/student.ts`
+- [x] T022 [US2] 实现 Student Mutation Resolvers `apps/backend/src/resolvers/student.ts`
+- [x] T023 [US2] 注册 Schema 到 Server `apps/backend/src/schema/index.ts`
+- [x] T024 [US2] 配置前端 Codegen `apps/frontend/codegen.ts`
+- [x] T025 [US2] 编写前端 GraphQL 操作 `apps/frontend/src/graphql/student.graphql`
+- [x] T026 [US2] 生成前端 Hooks `apps/frontend/src/graphql/generated.ts`
+- [x] T027 [US2] 实现学生列表组件 `apps/frontend/src/components/StudentList.vue`
+- [x] T028 [US2] 实现学生表单组件 `apps/frontend/src/components/StudentForm.vue`
+- [x] T029 [US2] 集成学生管理页面 `apps/frontend/src/views/StudentView.vue`
 
 **检查点**: 此时，用户故事 1 和 2 应都能独立工作
 
@@ -85,8 +85,8 @@
 
 ### 用户故事 3 的实现
 
-- [ ] T030 [US3] 创建清理脚本 `scripts/cleanup-example.js`
-- [ ] T031 [US3] 在根目录 package.json 添加清理命令 `package.json`
+- [x] T030 [US3] 创建清理脚本 `scripts/cleanup-example.js`
+- [x] T031 [US3] 在根目录 package.json 添加清理命令 `package.json`
 
 **检查点**: 所有用户故事现在都应能独立运行
 
@@ -96,8 +96,8 @@
 
 **目标**: 影响多个用户故事的改进
 
-- [ ] T032 [P] 更新项目文档 `README.md`
-- [ ] T033 [P] 全局类型检查与 Lint 修复
+- [x] T032 [P] 更新项目文档 `README.md`
+- [x] T033 [P] 全局类型检查与 Lint 修复
 
 ---
 
